@@ -10,34 +10,61 @@ import SpriteKit
 
 class Koch: UIView {
     var lineWidth: CGFloat = 0.5
+    var sideLength: CGFloat = 400
     
     var deep: Int = 4
     var color: CGColor
+    var isRainBow: Bool = false
     
     var points = [CGPoint]()
+    
+    var centerP: CGPoint = CGPoint(x: 0, y: 0)
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public init(frame: CGRect, lineWidth: CGFloat, color: UIColor, deep: Int) {
+    public init(frame: CGRect, lineWidth: CGFloat, color: UIColor, deep: Int, sideLength: CGFloat, isRainBow: Bool) {
         self.lineWidth = lineWidth
         self.color = color.cgColor
         self.deep = deep
+        self.sideLength = sideLength
+        self.isRainBow = isRainBow
         super.init(frame: frame)
+        
+        centerP = CGPoint(x: frame.width/2, y: frame.height/2)
     }
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
+        let halfSide = sideLength/2
+        let A = CGPoint(x: centerP.x - halfSide, y: centerP.y - halfSide * 1.73 / 3)
+        let B = CGPoint(x: centerP.x + halfSide, y: centerP.y - halfSide * 1.73 / 3)
+        let C = CGPoint(x: centerP.x, y: centerP.y + halfSide * 1.73 * 2/3)
         
-        drawKoch(from: CGPoint(x: 0, y: 100), to: CGPoint(x: 400, y: 100), context: context, deep: self.deep)
+        if deep > 1 {
+            drawKoch(from: B, to: A, context: context, deep: self.deep)
+            drawKoch(from: A, to: C, context: context, deep: self.deep)
+            drawKoch(from: C, to: B, context: context, deep: self.deep)
+        } else {
+            let path = CGMutablePath()
+            path.move(to: A)
+            path.addLine(to: B)
+            path.addLine(to: C)
+            path.addLine(to: A)
+            context.setStrokeColor(self.isRainBow ? UIColor.randomColor.cgColor : color)
+            context.addPath(path)
+            context.setLineWidth(lineWidth)
+            context.strokePath()
+        }
+        
     }
     
     func drawKoch(from: CGPoint, to: CGPoint, context: CGContext, deep: Int) {
         let pathOld = CGMutablePath()
         pathOld.move(to: from)
         pathOld.addLine(to: to)
-        context.setStrokeColor(UIColor.white.cgColor)
+        context.setStrokeColor((backgroundColor?.cgColor)!)
         context.addPath(pathOld)
         context.setLineWidth(lineWidth)
         context.strokePath()
@@ -67,12 +94,12 @@ class Koch: UIView {
         path.addLine(to: poD)
         path.addLine(to: poE)
         path.addLine(to: to)
-        context.setStrokeColor(color)
+        context.setStrokeColor(self.isRainBow ? UIColor.randomColor.cgColor : color)
         context.addPath(path)
         context.setLineWidth(lineWidth)
         context.strokePath()
         
-        if deep > 1 {
+        if deep > 2 {
             drawKoch(from: from, to: poC, context: context, deep: deep - 1)
             drawKoch(from: poC, to: poD, context: context, deep: deep - 1)
             drawKoch(from: poD, to: poE, context: context, deep: deep - 1)

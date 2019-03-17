@@ -9,13 +9,13 @@ var deepK: Int = 3
 var colorK: UIColor = UIColor.blue
 var ruleK: String = "F+F−F−F+F"
 var rotateAngle: Int = 90
-func setDeep(_ deep: Int) {
+func setDeep(deep: Int) {
     deepK = deep
 }
-func setRotateAngle(_ angle: Int) {
+func setRotateAngle(angle: Int) {
     rotateAngle = angle
 }
-func setRule(_ rule: String) {
+func setRule(rule: String) {
     ruleK = rule
 }
 //#-end-hidden-code
@@ -25,9 +25,9 @@ func setRule(_ rule: String) {
 */
 //#-code-completion(everything, hide)
 
-setDeep(/*#-editable-code*/3/*#-end-editable-code*/)
-setRule(/*#-editable-code*/"F+F−F−F+F"/*#-end-editable-code*/)
-setRotateAngle(/*#-editable-code*/90/*#-end-editable-code*/)
+setDeep(deep: /*#-editable-code*/3/*#-end-editable-code*/)
+setRule(rule: /*#-editable-code*/"F+F−F−F+F"/*#-end-editable-code*/)
+setRotateAngle(angle: /*#-editable-code*/90/*#-end-editable-code*/)
 
 //#-hidden-code
 let command: PlaygroundValue

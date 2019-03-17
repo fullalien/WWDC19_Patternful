@@ -1,8 +1,8 @@
 //
-//  See LICENSE folder for this template’s licensing information.
+//  LiveView.swift
+//  Book_Sources
 //
-//  Abstract:
-//  Instantiates a live view and passes it to the PlaygroundSupport framework.
+//  Created by 白梵 on 2019/3/16.
 //
 
 import UIKit

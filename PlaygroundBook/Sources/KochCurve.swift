@@ -10,8 +10,8 @@ import SpriteKit
 
 class KochCurve: UIView {
     var lineColor: CGColor = UIColor.black.cgColor
-    var lineWidth: CGFloat = 0.5
-    var deep: Int = 4
+    var lineWidth: CGFloat = 1
+    var deep: Int = 3
     
     var drawData: String = "F"
     var rule: String = "F+F−F−F+F"
