@@ -25,10 +25,10 @@ class Koch: UIView {
     }
     
     public init(frame: CGRect, lineWidth: CGFloat, color: UIColor, deep: Int, sideLength: CGFloat, isRainBow: Bool) {
-        self.lineWidth = lineWidth
+        self.lineWidth = lineWidth > 0 ? lineWidth : 1
         self.color = color.cgColor
-        self.deep = deep
-        self.sideLength = sideLength
+        self.deep = deep > 0 ? deep : 1
+        self.sideLength = sideLength > 50 ? sideLength : 50
         self.isRainBow = isRainBow
         super.init(frame: frame)
         

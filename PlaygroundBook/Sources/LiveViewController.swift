@@ -68,7 +68,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
                 view.addSubview(backView)
                 self.startAngle = 90
                 self.rotateAngle = 120
-                drawTwoRule(deep: 4, singleGraph: true, randomColor: true, isRainBow: true, lineWidth: 2)
+                drawTwoRule(deep: 4, singleGraph: true, randomColor: true, isRainBow: true, lineWidth: 2, lineColor: UIColor.white)
             case "koch_curve":
                 let minDimension = min(view.frame.size.width, view.frame.size.height)
                 backView = UIView(frame: view.frame)
@@ -158,14 +158,35 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
                                                         if case let .boolean(ranC) = message[7] {
                                                             if case let .boolean(isRainBow) = message[8] {
                                                                 if case let .floatingPoint(lineW) = message[9] {
-                                                                    self.axiom = st
-                                                                    self.firstRule = fir
-                                                                    self.secondRule = sec
-                                                                    self.kochDeep = d
-                                                                    self.startAngle = Float(sa)
-                                                                    self.rotateAngle = Float(ra)
-                                                                    
-                                                                    drawTwoRule(deep: kochDeep, singleGraph: sinG, randomColor: ranC, isRainBow: isRainBow, lineWidth: CGFloat(lineW))
+                                                                    if case let .floatingPoint(red) = message[10] {
+                                                                        if case let .floatingPoint(green) = message[11] {
+                                                                            if case let .floatingPoint(blue) = message[12] {
+                                                                                if case let .floatingPoint(alpha) = message[13] {
+                                                                                    if case let .floatingPoint(redB) = message[14] {
+                                                                                        if case let .floatingPoint(greenB) = message[15] {
+                                                                                            if case let .floatingPoint(blueB) = message[16] {
+                                                                                                if case let .floatingPoint(alphaB) = message[17] {
+                                                                                                    self.axiom = st
+                                                                                                    self.firstRule = fir
+                                                                                                    self.secondRule = sec
+                                                                                                    self.kochDeep = d
+                                                                                                    self.startAngle = Float(sa)
+                                                                                                    self.rotateAngle = Float(ra)
+                                                                                                    
+                                                                                                    let lineColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
+                                                                                                    let backBC = UIColor(red: CGFloat(redB), green: CGFloat(greenB), blue: CGFloat(blueB), alpha: CGFloat(alphaB))
+                                                                                                    
+                                                                                                    backView.backgroundColor = backBC
+                                                                                                    
+                                                                                                    drawTwoRule(deep: kochDeep, singleGraph: sinG, randomColor: ranC, isRainBow: isRainBow, lineWidth: CGFloat(lineW), lineColor: lineColor)
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -202,7 +223,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         }
     }
     
-    func drawTwoRule(deep: Int, singleGraph: Bool, randomColor: Bool, isRainBow: Bool, lineWidth: CGFloat) {
+    func drawTwoRule(deep: Int, singleGraph: Bool, randomColor: Bool, isRainBow: Bool, lineWidth: CGFloat, lineColor: UIColor) {
         let minDimension = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         let height = CGFloat(Double((20 * pow(2, deep)).description)!) + 1
         let width: CGFloat = height * CGFloat(sin(Double.pi/3))
@@ -217,11 +238,11 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             let rowCount = Int(self.view.frame.height / height) + 1
             for coloumIndex in 0..<coloumCount {
                 for rowIndex in 0..<rowCount {
-                    itemView = SierpinskiTriangle(frame: CGRect(x: CGFloat(coloumIndex) * width, y: CGFloat(rowIndex) * height, width: width, height: height), deep: deep, startAngle: 90, rotateAngle: 120, firstRule: "F-G+F+G-F", secondRule: "GG", axiom: "F-G-G", lineColor: randomColor ? UIColor.randomColor : UIColor.black, isSingle: false, isRainBow: isRainBow, lineWidth: lineWidth)
+                    itemView = SierpinskiTriangle(frame: CGRect(x: CGFloat(coloumIndex) * width, y: CGFloat(rowIndex) * height, width: width, height: height), deep: deep, startAngle: 90, rotateAngle: 120, firstRule: "F-G+F+G-F", secondRule: "GG", axiom: "F-G-G", lineColor: randomColor ? UIColor.randomColor : lineColor, isSingle: false, isRainBow: isRainBow, lineWidth: lineWidth)
                     itemView.backgroundColor = UIColor.clear
                     backView.addSubview(itemView)
                     
-                    itemView = SierpinskiTriangle(frame: CGRect(x: CGFloat(coloumIndex) * width, y: CGFloat(rowIndex) * height - height/2 - 1, width: width, height: height), deep: deep, startAngle: 90, rotateAngle: 120, firstRule: "F-G+F+G-F", secondRule: "GG", axiom: "F-G-G", lineColor: randomColor ? UIColor.randomColor : UIColor.black, isSingle: false, isRainBow: isRainBow, lineWidth: lineWidth)
+                    itemView = SierpinskiTriangle(frame: CGRect(x: CGFloat(coloumIndex) * width, y: CGFloat(rowIndex) * height - height/2 - 1, width: width, height: height), deep: deep, startAngle: 90, rotateAngle: 120, firstRule: "F-G+F+G-F", secondRule: "GG", axiom: "F-G-G", lineColor: randomColor ? UIColor.randomColor : lineColor, isSingle: false, isRainBow: isRainBow, lineWidth: lineWidth)
                     itemView.transform = CGAffineTransform(rotationAngle: CGFloat(180 * Double.pi / 180.0));
                     itemView.backgroundColor = UIColor.clear
                     backView.addSubview(itemView)
@@ -229,7 +250,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             }
         } else {
             let rect = CGRect(x: backView.frame.midX-(minDimension/4), y: view.frame.midY-(minDimension/4), width: minDimension, height: minDimension)
-            kochView = SierpinskiTriangle(frame: rect, deep: deep, startAngle: startAngle, rotateAngle: rotateAngle, firstRule: firstRule, secondRule: secondRule, axiom: axiom, lineColor: randomColor ? UIColor.randomColor : UIColor.black, isSingle: true, isRainBow: isRainBow, lineWidth: lineWidth)
+            kochView = SierpinskiTriangle(frame: rect, deep: deep, startAngle: startAngle, rotateAngle: rotateAngle, firstRule: firstRule, secondRule: secondRule, axiom: axiom, lineColor: randomColor ? UIColor.randomColor : lineColor, isSingle: true, isRainBow: isRainBow, lineWidth: lineWidth)
             kochView.backgroundColor = UIColor.clear
             backView.addSubview(kochView)
             

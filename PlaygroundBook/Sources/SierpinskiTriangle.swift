@@ -29,7 +29,7 @@ class SierpinskiTriangle: UIView {
     var currentPo: CGPoint = CGPoint(x: 100, y: 100)
     
     public init(frame: CGRect, deep: Int, startAngle: Float, rotateAngle: Float, firstRule: String, secondRule: String, axiom: String, lineColor: UIColor, isSingle: Bool, isRainBow: Bool, lineWidth: CGFloat) {
-        self.deep = deep
+        self.deep = deep > 0 ? deep : 1
         self.rotateAngle = rotateAngle
         self.startAngle = startAngle
         self.firstRule = firstRule
@@ -37,7 +37,7 @@ class SierpinskiTriangle: UIView {
         self.drawData = axiom
         self.lineColor = lineColor.cgColor
         self.isRainBow = isRainBow
-        self.lineWidth = lineWidth
+        self.lineWidth = lineWidth > 0 ? lineWidth : 1
         super.init(frame: frame)
         
         if isSingle {
