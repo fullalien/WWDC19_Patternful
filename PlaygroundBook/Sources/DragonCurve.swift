@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Dragon_curve: UIView {
+class DragonCurve: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

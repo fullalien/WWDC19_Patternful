@@ -5,7 +5,7 @@ import PlaygroundSupport
  ### Welcome
  * Welcome to the world of pattern.
  * At next few pages, I will show you some graphics using L-System.
- * Hope you like it.
+ * Hope you like it. ❤️
  
  #### What is L-System?
  L-System is a parallel rewriting system and a type of formal grammar, and it was introduced and developed in 1968 by Aristid Lindenmayer.
@@ -14,7 +14,7 @@ import PlaygroundSupport
  
  It can be used to generate **self-similar fractals**.
  
- Are you ready, let's go to [Next Page](@next)
+ Are you ready, let's go to the next page: [Koch Snowflake](@next)
  
 */
 //#-code-completion(everything, hide)

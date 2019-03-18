@@ -8,14 +8,14 @@
 import UIKit
 import SpriteKit
 
-class TwoRuleL: UIView {
+class SierpinskiTriangle: UIView {
     var lineColor: CGColor = UIColor.black.cgColor
     var lineWidth: CGFloat = 1
     var deep: Int = 3
     
     var drawData: String = "F-G-G"
-    var rule: String = "F-G+F+G-F"
-    var secRule: String = "GG"
+    var firstRule: String = "F-G+F+G-F"
+    var secondRule: String = "GG"
     
     var startAngle: Float = 0
     var rotateAngle: Float = 120
@@ -28,15 +28,16 @@ class TwoRuleL: UIView {
     
     var currentPo: CGPoint = CGPoint(x: 100, y: 100)
     
-    public init(frame: CGRect, deep: Int, startAngle: Float, rotateAngle: Float, rule: String, secRule: String, start: String, lineColor: UIColor, isSingle: Bool, isRainBow: Bool) {
+    public init(frame: CGRect, deep: Int, startAngle: Float, rotateAngle: Float, firstRule: String, secondRule: String, axiom: String, lineColor: UIColor, isSingle: Bool, isRainBow: Bool, lineWidth: CGFloat) {
         self.deep = deep
         self.rotateAngle = rotateAngle
         self.startAngle = startAngle
-        self.rule = rule
-        self.secRule = secRule
-        self.drawData = start
+        self.firstRule = firstRule
+        self.secondRule = secondRule
+        self.drawData = axiom
         self.lineColor = lineColor.cgColor
         self.isRainBow = isRainBow
+        self.lineWidth = lineWidth
         super.init(frame: frame)
         
         if isSingle {
@@ -90,8 +91,8 @@ class TwoRuleL: UIView {
     
     func initialDrawData() {
         for _ in 1...deep {
-            drawData = drawData.replacingOccurrences(of: "G", with: secRule)
-            drawData = drawData.replacingOccurrences(of: "F", with: rule)
+            drawData = drawData.replacingOccurrences(of: "G", with: secondRule)
+            drawData = drawData.replacingOccurrences(of: "F", with: firstRule)
         }
     }
     

@@ -7,14 +7,24 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
 
 //#-end-hidden-code
 /*:
- ### Koch Snowflake
- You also can call it **Koch Curve**, **Koch Star** or **Koch Island**. As you saw on the right, it is really like a snowflake. 😜
+ ### An Amazing Snowflake
+ You can also call it **Koch Curve**, **Koch Star** or **Koch Island**. As you saw on the right, it is really like a snowflake. 😜
  
  ##### How To Draw It?
  The Koch snowflake can be constructed by starting with an equilateral triangle, then recursively altering each line segment as follows:
  1. divide the line segment into three segments of equal length.
  2. draw an equilateral triangle that has the middle segment from step 1 as its base and points outward.
  3. remove the line segment that is the base of the triangle from step 2.
+ 
+ #### Let's Start
+ Modify the values below to see what will happen. Just do it, anytime you can reset this page to restart.
+ 
+ Set deep from 1 to 5, what will happen?
+ 
+ 
+ > `deep` shouldn't be too large, otherwise playground will run for a long time to draw it
+ > `lineColor` works only when `isRainBow` = false
+ > `lineColor` shouldn't be the same as `backGroundColor`
  
 */
 //#-code-completion(everything, hide)
