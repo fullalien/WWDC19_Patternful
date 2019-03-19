@@ -16,12 +16,12 @@ import PlaygroundSupport
  
  Are you ready, let's go to the next page: [Koch Snowflake](@next)
  
+ 
 */
 //#-code-completion(everything, hide)
 
 //#-hidden-code
 
 //#-end-hidden-code
-//#-code-completion(everything, hide)
 
 

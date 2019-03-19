@@ -8,7 +8,7 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
 //#-end-hidden-code
 /*:
  ### An Amazing Snowflake
- You can also call it **Koch Curve**, **Koch Star** or **Koch Island**. As you saw on the right, it is really like a snowflake. 😜
+ You can also call it **Koch Curve**, **Koch Star** or **Koch Island**. As you saw on the right, it's really like a snowflake. 😜
  
  ##### How To Draw It?
  The Koch snowflake can be constructed by starting with an equilateral triangle, then recursively altering each line segment as follows:
@@ -19,12 +19,12 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  #### Let's Start
  Modify the values below to see what will happen. **Just do it, anytime you can reset this page to restart**.
  
- * Set `deep` from 1 to 5, what will happen?, can you find the pattern?
+ * Set `deep` from 1 to 5, what will happen?, can you find out the pattern?
  * Set `lineColor`, `backGroundColor` to your favorite color.
  * Set `isRainBow` true, what does it look like?
  
  > `deep` shouldn't be too large, otherwise playground will run for a long time to draw it.
- > `lineColor` works only when `isRainBow` is false.
+ > `lineColor` only works when `isRainBow` is false.
  > `lineColor` shouldn't be the same as `backGroundColor`.
  
  When you are done, you can turn to the next page: [Sierpinski Triangle](@next)

@@ -8,10 +8,10 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
 //#-end-hidden-code
 /*:
  ### Crazy Triangle
- The graphic you see on the right is Sierpinski Triangle, it's an equilateral triangle, and subdivided recursively into smaller equilateral triangles. No matter how big it is, it is made up of smaller triangles. This is why I call it crazy triangle. 🤪
+ The graphics you see on the right is Sierpinski Triangle, it's an equilateral triangle, and subdivided recursively into smaller equilateral triangles. No matter how big it is, it is made up of smaller triangles. This is why I call it crazy triangle. 🤪
  
  You may want to know how I draw it. Before it, you may need know something below.
- * `axiom` is a start string, it's character can be  recursively replaced by the `firstRule` or `secondRule`.
+ * `axiom` is a start string, it's character can be recursively replaced by the `firstRule` or `secondRule`.
  * `deep` is the number of `recursions`.
  * F or G means "draw forward", + means "turn left `rotateAngle`", - means "turn right `rotateAngle`".
  * startAngle means which angle to start.
@@ -25,31 +25,37 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  Up to now, you already got what you need know.
  
  #### Let's Start
- Modify the values below to what you want. Just blow minds, you may create a new pattern. **Anytime you can reset this page to restart**. Have fun!
+ Modify the values below to what you want. Just **blow minds** 🤯, you may create a new pattern. **Anytime you can reset this page to restart**.
+ 
+ * What will happen if the value of `axiom` changes? How about `firstRule` or `secondRule`?
+ * Set `deep` from 1 to 5, what will happen? Can you find out the pattern?
+ * Set `startAngle` or `rotateAngle` to a different one, what will happen?
+ * Set `singleGraph` false, is that looks cool? 🙌
+ 
+ Have fun! 🥳
  
  > `axiom`, `firstRule`, `secondRule`, `startAngle`, `rotateAngle` only works when `singleGraph` is true.
- > `randomColor` only works when `isRainBow` is false.
- > `lineColor` only works when `randomColor` and `isRainBow` are false.
+ > `randomColor` only works when `isRainBow` is false.[[p
+ > `lineColor` only works when both `randomColor` and `isRainBow` are false.
  
  When you are done, you can turn to the next page: [Thank You](@next)
-
  
 */
 //#-code-completion(everything, hide)
 
-//
+// The Rules
 let axiom = /*#-editable-code*/"F-G-G"/*#-end-editable-code*/
 let firstRule = /*#-editable-code*/"F-G+F+G-F"/*#-end-editable-code*/
 let secondRule = /*#-editable-code*/"GG"/*#-end-editable-code*/
 
-// Enable single graphic
+// Enable single graphics
 let singleGraph = /*#-editable-code*/true/*#-end-editable-code*/
 
-//
+// Draw angles
 let startAngle = /*#-editable-code*/90/*#-end-editable-code*/
 let rotateAngle = /*#-editable-code*/120/*#-end-editable-code*/
 
-
+// Try using a Int number, like 2 or 3
 let deep = /*#-editable-code*/4/*#-end-editable-code*/
 
 // Change the width of the line

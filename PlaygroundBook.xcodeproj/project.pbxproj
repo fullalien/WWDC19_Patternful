@@ -14,9 +14,9 @@
 		21901C57223BC3B300D740C3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21901C56223BC3B300D740C3 /* Utils.swift */; };
 		21B6D89F223C846B0097BD5F /* KochCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6D89E223C846B0097BD5F /* KochCurve.swift */; };
 		21B6D8A1223CA1DF0097BD5F /* SierpinskiTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6D8A0223CA1DF0097BD5F /* SierpinskiTriangle.swift */; };
+		21BF6C8F22411B05001F254B /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 21BF6C8D22411B05001F254B /* Resources */; };
+		21BF6C9022411B10001F254B /* Resources in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 21BF6C8D22411B05001F254B /* Resources */; };
 		21D6394E2240ACE8008D38BA /* WWDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6394D2240ACE8008D38BA /* WWDC.swift */; };
-		21D6580E223E47F9004ABAD6 /* PublicResources in Resources */ = {isa = PBXBuildFile; fileRef = 21D6580D223E47F9004ABAD6 /* PublicResources */; };
-		21D6580F223E4803004ABAD6 /* PublicResources in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 21D6580D223E47F9004ABAD6 /* PublicResources */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2E3BF2056F35A00416A35 /* AppDelegate.swift */; };
 		5EA2E3CA2056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2E3C82056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard */; };
@@ -75,7 +75,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				21D6580F223E4803004ABAD6 /* PublicResources in Copy Book Contents */,
+				21BF6C9022411B10001F254B /* Resources in Copy Book Contents */,
 				5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */,
 				5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */,
 				5EF2F9B82054E6FE00191409 /* Sources in Copy Book Contents */,
@@ -106,8 +106,8 @@
 		21901C56223BC3B300D740C3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		21B6D89E223C846B0097BD5F /* KochCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KochCurve.swift; sourceTree = "<group>"; };
 		21B6D8A0223CA1DF0097BD5F /* SierpinskiTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SierpinskiTriangle.swift; sourceTree = "<group>"; };
+		21BF6C8D22411B05001F254B /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		21D6394D2240ACE8008D38BA /* WWDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC.swift; sourceTree = "<group>"; };
-		21D6580D223E47F9004ABAD6 /* PublicResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PublicResources; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* Patternful.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Patternful.playgroundbook; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCF2051DF0F004D8D25 /* Manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				5E086DCF2051DF0F004D8D25 /* Manifest.plist */,
 				5EF2F9A22054BB3E00191409 /* Sources */,
 				5EF2F9792054B64800191409 /* PrivateResources */,
-				21D6580D223E47F9004ABAD6 /* PublicResources */,
+				21BF6C8D22411B05001F254B /* Resources */,
 				5EF2F9B62054E6F900191409 /* Chapters */,
 				5EF2F9A42054BB9500191409 /* Supporting Content */,
 			);
@@ -381,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
-				21D6580E223E47F9004ABAD6 /* PublicResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BF6C8F22411B05001F254B /* Resources in Resources */,
 				5EA2E3CA2056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

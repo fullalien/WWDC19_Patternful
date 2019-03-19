@@ -57,7 +57,6 @@ class WWDC: UIView {
         
         for _ in 1...5 {
             start = start.replacingOccurrences(of: "F", with: "F+F−F−F+F")
-//            start = start.replacingOccurrences(of: "X", with: "X+YF+")
         }
         
         lineLength = 13.44
@@ -66,13 +65,13 @@ class WWDC: UIView {
         lineColor = UIColor(red:0.95,green:0.95,blue:0.95,alpha:1.00).cgColor
         startAngle = 90
         
-        currentPo = CGPoint(x: center.x + CGFloat(lineLength * 13.5), y: center.y - CGFloat(15 * 10 + lineLength * 10))
+        currentPo = CGPoint(x: center.x + CGFloat(lineLength * 13.5), y: center.y + CGFloat(15 * 10 + lineLength * 3))
         drawLines(data: start, context: context)
         
         
         startAngle = -90
         
-        currentPo = CGPoint(x: center.x - CGFloat(lineLength * 13.5), y: center.y + CGFloat(15 * 10 + lineLength * 10))
+        currentPo = CGPoint(x: center.x - CGFloat(lineLength * 13.5), y: center.y - CGFloat(15 * 10 + lineLength * 3))
         drawLines(data: start, context: context)
     }
     
