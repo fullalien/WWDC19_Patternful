@@ -69,6 +69,13 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
                 self.startAngle = 90
                 self.rotateAngle = 120
                 drawTwoRule(deep: 4, singleGraph: true, randomColor: true, isRainBow: true, lineWidth: 2, lineColor: UIColor.white)
+            case "thank_you":
+                backView = UIView(frame: view.frame)
+                backView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                view.addSubview(backView)
+                kochView = WWDC(frame: self.view.frame)
+                kochView.backgroundColor = UIColor.clear
+                backView.addSubview(kochView)
             case "koch_curve":
                 let minDimension = min(view.frame.size.width, view.frame.size.height)
                 backView = UIView(frame: view.frame)

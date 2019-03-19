@@ -22,5 +22,6 @@ import PlaygroundSupport
 //#-hidden-code
 
 //#-end-hidden-code
+//#-code-completion(everything, hide)
 
 

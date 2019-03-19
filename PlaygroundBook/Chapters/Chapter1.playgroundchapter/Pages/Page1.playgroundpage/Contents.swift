@@ -17,26 +17,39 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  3. remove the line segment that is the base of the triangle from step 2.
  
  #### Let's Start
- Modify the values below to see what will happen. Just do it, anytime you can reset this page to restart.
+ Modify the values below to see what will happen. **Just do it, anytime you can reset this page to restart**.
  
- Set deep from 1 to 5, what will happen?
+ * Set `deep` from 1 to 5, what will happen?, can you find the pattern?
+ * Set `lineColor`, `backGroundColor` to your favorite color.
+ * Set `isRainBow` true, what does it look like?
  
+ > `deep` shouldn't be too large, otherwise playground will run for a long time to draw it.
+ > `lineColor` works only when `isRainBow` is false.
+ > `lineColor` shouldn't be the same as `backGroundColor`.
  
- > `deep` shouldn't be too large, otherwise playground will run for a long time to draw it
- > `lineColor` works only when `isRainBow` = false
- > `lineColor` shouldn't be the same as `backGroundColor`
+ When you are done, you can turn to the next page: [Sierpinski Triangle](@next)
  
 */
 //#-code-completion(everything, hide)
 
+// Try using a Int number, like 1 or 2
 let deep = /*#-editable-code*/3/*#-end-editable-code*/
+
+// Change up some of the colors!
 let lineColor = /*#-editable-code*/#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)/*#-end-editable-code*/
 let backGroundColor = /*#-editable-code*/#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)/*#-end-editable-code*/
-let lineWidth = /*#-editable-code*/2/*#-end-editable-code*/
-let sideLength = /*#-editable-code*/350/*#-end-editable-code*/
+
+// Enable random color of each line
 let isRainBow = /*#-editable-code*/false/*#-end-editable-code*/
 
+// Change the width of the line
+let lineWidth = /*#-editable-code*/2/*#-end-editable-code*/
+
+// Change the size of the snowflake
+let sideLength = /*#-editable-code*/350/*#-end-editable-code*/
+
 //#-hidden-code
+//#-code-completion(everything, hide)
 let command: PlaygroundValue
 var red: CGFloat = 0.0
 var green: CGFloat = 0.0

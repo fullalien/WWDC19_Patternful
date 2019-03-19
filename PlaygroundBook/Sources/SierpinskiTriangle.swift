@@ -29,7 +29,7 @@ class SierpinskiTriangle: UIView {
     var currentPo: CGPoint = CGPoint(x: 100, y: 100)
     
     public init(frame: CGRect, deep: Int, startAngle: Float, rotateAngle: Float, firstRule: String, secondRule: String, axiom: String, lineColor: UIColor, isSingle: Bool, isRainBow: Bool, lineWidth: CGFloat) {
-        self.deep = deep > 0 ? deep : 1
+        self.deep = deep >= 0 ? deep : 0
         self.rotateAngle = rotateAngle
         self.startAngle = startAngle
         self.firstRule = firstRule
@@ -56,7 +56,9 @@ class SierpinskiTriangle: UIView {
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        initialDrawData()
+        if deep > 0 {
+            initialDrawData()
+        }
         
 //        switch deep {
 //        case 1:
@@ -104,6 +106,7 @@ class SierpinskiTriangle: UIView {
         path.move(to: currentPo - disPoint)
         path.addLine(to: to - disPoint)
         context.setStrokeColor(isRainBow ? UIColor.randomColor.cgColor : lineColor)
+        context.setLineCap(CGLineCap.round)
         context.addPath(path)
         context.setLineWidth(lineWidth)
         context.strokePath()

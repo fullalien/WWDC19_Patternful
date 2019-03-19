@@ -80,6 +80,7 @@ class HilbertCurve: UIView {
         path.move(to: currentPo)
         path.addLine(to: to)
         context.setStrokeColor(isRainBow ? UIColor.randomColor.cgColor : lineColor)
+        context.setLineCap(CGLineCap.round)
         context.addPath(path)
         context.setLineWidth(lineWidth)
         context.strokePath()

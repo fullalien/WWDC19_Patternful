@@ -80,6 +80,7 @@ class KochCurve: UIView {
         path.move(to: currentPo)
         path.addLine(to: to)
         context.setStrokeColor(lineColor)
+        context.setLineCap(CGLineCap.round)
         context.addPath(path)
         context.setLineWidth(lineWidth)
         context.strokePath()

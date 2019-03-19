@@ -14,6 +14,7 @@
 		21901C57223BC3B300D740C3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21901C56223BC3B300D740C3 /* Utils.swift */; };
 		21B6D89F223C846B0097BD5F /* KochCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6D89E223C846B0097BD5F /* KochCurve.swift */; };
 		21B6D8A1223CA1DF0097BD5F /* SierpinskiTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6D8A0223CA1DF0097BD5F /* SierpinskiTriangle.swift */; };
+		21D6394E2240ACE8008D38BA /* WWDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6394D2240ACE8008D38BA /* WWDC.swift */; };
 		21D6580E223E47F9004ABAD6 /* PublicResources in Resources */ = {isa = PBXBuildFile; fileRef = 21D6580D223E47F9004ABAD6 /* PublicResources */; };
 		21D6580F223E4803004ABAD6 /* PublicResources in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 21D6580D223E47F9004ABAD6 /* PublicResources */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
@@ -105,6 +106,7 @@
 		21901C56223BC3B300D740C3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		21B6D89E223C846B0097BD5F /* KochCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KochCurve.swift; sourceTree = "<group>"; };
 		21B6D8A0223CA1DF0097BD5F /* SierpinskiTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SierpinskiTriangle.swift; sourceTree = "<group>"; };
+		21D6394D2240ACE8008D38BA /* WWDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC.swift; sourceTree = "<group>"; };
 		21D6580D223E47F9004ABAD6 /* PublicResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PublicResources; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* Patternful.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Patternful.playgroundbook; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				21B6D8A0223CA1DF0097BD5F /* SierpinskiTriangle.swift */,
 				213CA890223DE2600084DEF4 /* HilbertCurve.swift */,
 				213CA892223E253C0084DEF4 /* DragonCurve.swift */,
+				21D6394D2240ACE8008D38BA /* WWDC.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			files = (
 				21B6D89F223C846B0097BD5F /* KochCurve.swift in Sources */,
 				21901C55223BA38600D740C3 /* Koch.swift in Sources */,
+				21D6394E2240ACE8008D38BA /* WWDC.swift in Sources */,
 				21B6D8A1223CA1DF0097BD5F /* SierpinskiTriangle.swift in Sources */,
 				213CA891223DE2600084DEF4 /* HilbertCurve.swift in Sources */,
 				213CA88F223DD5EC0084DEF4 /* Constants.swift in Sources */,
