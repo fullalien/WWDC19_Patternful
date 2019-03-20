@@ -1,9 +1,12 @@
 //#-hidden-code
 import PlaygroundSupport
+import UIKit
+
 //#-end-hidden-code
 /*:
  ### Welcome
  * Welcome to the world of pattern.
+ * This playground is about **self-similar fractals** and **pattern**.
  * At next few pages, I will show you some graphics using L-System.
  * Hope you like it. ❤️
  
@@ -15,7 +18,6 @@ import PlaygroundSupport
  It can be used to generate **self-similar fractals**.
  
  Are you ready, let's go to the next page: [Koch Snowflake](@next)
- 
  
 */
 //#-code-completion(everything, hide)

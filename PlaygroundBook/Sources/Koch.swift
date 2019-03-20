@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SpriteKit
 
 class Koch: UIView {
     var lineWidth: CGFloat = 0.5

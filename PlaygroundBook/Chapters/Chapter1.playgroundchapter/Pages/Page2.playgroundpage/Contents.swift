@@ -1,6 +1,6 @@
 //#-hidden-code
 import PlaygroundSupport
-import SpriteKit
+import UIKit
 
 let page = PlaygroundPage.current
 let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
@@ -14,7 +14,7 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  * `axiom` is a start string, it's character can be recursively replaced by the `firstRule` or `secondRule`.
  * `deep` is the number of `recursions`.
  * F or G means "draw forward", + means "turn left `rotateAngle`", - means "turn right `rotateAngle`".
- * startAngle means which angle to start.
+ * `startAngle` means which angle to start.
  
  So the first step is to generate a string. Below is an example:
  * deep = 0 -> F-G-G
@@ -30,12 +30,14 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  * What will happen if the value of `axiom` changes? How about `firstRule` or `secondRule`?
  * Set `deep` from 1 to 5, what will happen? Can you find out the pattern?
  * Set `startAngle` or `rotateAngle` to a different one, what will happen?
- * Set `singleGraph` false, is that looks cool? 🙌
+ * Set `singleGraph` false, is that looks cool? 🙌 You also can change other variables to make it looks cooler, such as `deep`, `lineWidth`.
+ 
+ You can save the graphics you created as a picture via tools -> take a picture.
  
  Have fun! 🥳
  
  > `axiom`, `firstRule`, `secondRule`, `startAngle`, `rotateAngle` only works when `singleGraph` is true.
- > `randomColor` only works when `isRainBow` is false.[[p
+ > `randomColor` only works when `isRainBow` is false.
  > `lineColor` only works when both `randomColor` and `isRainBow` are false.
  
  When you are done, you can turn to the next page: [Thank You](@next)

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SpriteKit
 import PlaygroundSupport
 
 @objc(Book_Sources_LiveViewController)
@@ -45,7 +44,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
                 backView = UIView(frame: view.frame)
                 backView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 view.addSubview(backView)
-                kochView = Koch(frame: self.view.frame, lineWidth: 2, color: UIColor.white, deep: kochDeep, sideLength: 350, isRainBow: true)
+                kochView = Koch(frame: self.view.frame, lineWidth: 2, color: UIColor.white, deep: kochDeep, sideLength: 350, isRainBow: false)
                 kochView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 self.welcomeText = UILabel(frame: CGRect(x: 0, y: 0, width: 550, height: 300))
                 self.welcomeText.text = "PATTERNFUL"

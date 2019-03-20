@@ -1,6 +1,6 @@
 //#-hidden-code
 import PlaygroundSupport
-import SpriteKit
+import UIKit
 
 let page = PlaygroundPage.current
 let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy

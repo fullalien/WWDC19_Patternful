@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SpriteKit
 
 class KochCurve: UIView {
     var lineColor: CGColor = UIColor.black.cgColor

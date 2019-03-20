@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SpriteKit
 
 class SierpinskiTriangle: UIView {
     var lineColor: CGColor = UIColor.black.cgColor
