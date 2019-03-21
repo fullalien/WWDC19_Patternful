@@ -48,7 +48,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
                 kochView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 self.welcomeText = UILabel(frame: CGRect(x: 0, y: 0, width: 550, height: 300))
                 self.welcomeText.text = "PATTERNFUL"
-                self.welcomeText.font = UIFont(name: "PingFang SC", size: 80)
+                self.welcomeText.font = UIFont(name: "PingFang SC", size: 78)
                 self.welcomeText.textColor = UIColor.white
                 self.welcomeText.textAlignment = NSTextAlignment.center
                 self.welcomeText.backgroundColor = UIColor.clear

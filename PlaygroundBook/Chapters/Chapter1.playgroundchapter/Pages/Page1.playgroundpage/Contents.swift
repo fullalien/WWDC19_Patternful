@@ -19,7 +19,7 @@ let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy
  #### Let's Start
  Modify the values below to see what will happen. **Just do it, anytime you can reset this page to restart**.
  
- * Set `deep` from 1 to 5, what will happen?, can you find out the pattern?
+ * Set `deep` from 1 to 5, what will happen? Can you find out the pattern?
  * Set `lineColor`, `backGroundColor` to your favorite color.
  * Set `isRainBow` true, what does it look like?
  
